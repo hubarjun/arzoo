@@ -1,0 +1,23 @@
+#root {
+  text-align: center;
+}
+
+/* Override A-Frame styles for fullscreen VR */
+.a-enter-vr {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.a-enter-vr-button {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 9999px !important;
+  padding: 10px !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+.a-enter-vr-button:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
