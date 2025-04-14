@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import { Building2, Home, ChefHat, Bed } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import LiquidChrome from "../components/ui/LiquidChrome";
 import { Link } from "react-router-dom";
 import { RoomList } from "../components/RoomList";
+import ShinyText from "../components/ui/ShinyText";
 
 const features = [
   {
@@ -42,25 +44,61 @@ export default function LandingPage() {
           </p>
           <Button
             size="lg"
-            className="bg-white text-black hover:bg-gray-200 transition-all"
+            className="bg-grey-200 border border-white  rounded-3xl hover:text-black hover:bg-gray-200 transition-all"
             asChild
           >
-            <Link to="/rooms">Explore Rooms</Link>
+            <Link to="/rooms">
+              <ShinyText
+                text="Explore Rooms"
+                disabled={false}
+                speed={3}
+                className=" hover:text-black"
+              />
+            </Link>
           </Button>
         </motion.div>
 
-        <motion.div
-          animate={{
-            rotate: 360,
-            scale: [1, 1.1, 1],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-          className="absolute w-[800px] h-[800px] border border-white/10 rounded-full"
-        />
+        <div className="absolute w-full h-full ">
+          <LiquidChrome
+            effectOptions={{
+              onSpeedUp: () => {},
+              onSlowDown: () => {},
+              distortion: "turbulentDistortion",
+              length: 400,
+              roadWidth: 10,
+              islandWidth: 2,
+              lanesPerRoad: 4,
+              fov: 90,
+              fovSpeedUp: 150,
+              speedUp: 2,
+              carLightsFade: 0.4,
+              totalSideLightSticks: 20,
+              lightPairsPerRoadWay: 40,
+              shoulderLinesWidthPercentage: 0.05,
+              brokenLinesWidthPercentage: 0.1,
+              brokenLinesLengthPercentage: 0.5,
+              lightStickWidth: [0.12, 0.5],
+              lightStickHeight: [1.3, 1.7],
+              movingAwaySpeed: [60, 80],
+              movingCloserSpeed: [-120, -160],
+              carLightsLength: [400 * 0.03, 400 * 0.2],
+              carLightsRadius: [0.05, 0.14],
+              carWidthPercentage: [0.3, 0.5],
+              carShiftX: [-0.8, 0.8],
+              carFloorSeparation: [0, 5],
+              colors: {
+                roadColor: 0x080808,
+                islandColor: 0x0a0a0a,
+                background: 0x000000,
+                shoulderLines: 0xffffff,
+                brokenLines: 0xffffff,
+                leftCars: [0xd856bf, 0x6750a2, 0xc247ac],
+                rightCars: [0x03b3c3, 0x0e5ea5, 0x324555],
+                sticks: 0x03b3c3,
+              },
+            }}
+          />
+        </div>
       </section>
 
       <section className="py-20 px-6 bg-neutral-900">

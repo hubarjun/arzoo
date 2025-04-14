@@ -6,11 +6,13 @@ import Navigation from "./components/Navigation";
 import "./App.css";
 import { RoomList } from "./components/RoomList";
 import { RoomProvider } from "./context/RoomContext";
+import SplashCursor from "./components/ui/SplashCursor";
 
 function App() {
   return (
     <RoomProvider>
       <Router>
+        <SplashCursor />
         <div className="min-h-screen bg-black text-white">
           <Navigation />
           <AnimatePresence mode="wait">
