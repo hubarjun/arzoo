@@ -4,20 +4,25 @@ import LandingPage from "./pages/LandingPage";
 import RoomView from "./pages/RoomView";
 import Navigation from "./components/Navigation";
 import "./App.css";
+import { RoomList } from "./components/RoomList";
+import { RoomProvider } from "./context/RoomContext";
 
 function App() {
   return (
-    <Router>
-      <div className="min-h-screen bg-black text-white">
-        <Navigation />
-        <AnimatePresence mode="wait">
-          <Routes>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/room/:roomId" element={<RoomView />} />
-          </Routes>
-        </AnimatePresence>
-      </div>
-    </Router>
+    <RoomProvider>
+      <Router>
+        <div className="min-h-screen bg-black text-white">
+          <Navigation />
+          <AnimatePresence mode="wait">
+            <Routes>
+              <Route path="/" element={<LandingPage />} />
+              <Route path="/room/:roomId" element={<RoomView />} />
+              <Route path="/rooms" element={<RoomList />} />
+            </Routes>
+          </AnimatePresence>
+        </div>
+      </Router>
+    </RoomProvider>
   );
 }
 

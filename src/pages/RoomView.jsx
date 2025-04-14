@@ -7,13 +7,19 @@ import BackButton from "@/components/BackButton";
 const roomData = {
   bedroom: {
     title: "Master Bedroom",
-    model:
-      "https://cdn.glitch.global/b8e5e60f-8a24-4f42-a8c9-e3bc37658d0c/bedroom.glb",
+    model: "/glb/bedroomvrmodel.glb",
   },
   kitchen: {
     title: "Modern Kitchen",
-    model:
-      "https://cdn.glitch.global/b8e5e60f-8a24-4f42-a8c9-e3bc37658d0c/kitchen.glb",
+    model: "/glb/kitchenvrmodel.glb",
+  },
+  bathroom: {
+    title: "Modern Kitchen",
+    model: "/glb/bathroomvrmodel.glb",
+  },
+  LivingRoom: {
+    title: "Modern Kitchen",
+    model: "/glb/livingroomvrmodel.glb",
   },
 };
 
@@ -21,6 +27,7 @@ export default function RoomView() {
   const { roomId } = useParams();
   const [isLoading, setIsLoading] = useState(true);
   const room = roomId ? roomData[roomId] : null;
+  console.log(room.model);
 
   useEffect(() => {
     const timer = setTimeout(() => {

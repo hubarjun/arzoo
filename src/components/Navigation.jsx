@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion';
-import { Building2 } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
+import { motion } from "framer-motion";
+import { Building2 } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 export default function Navigation() {
   return (
@@ -15,19 +15,18 @@ export default function Navigation() {
           <Building2 className="w-8 h-8" />
           <span className="font-space text-xl">VirtualBuild</span>
         </Link>
-        
+
         <nav className="hidden md:flex items-center gap-8">
-          <Link to="/" className="text-sm hover:text-white/70 transition-colors">
-            Home
-          </Link>
-          <Link to="/rooms" className="text-sm hover:text-white/70 transition-colors">
-            Rooms
-          </Link>
-          <Link to="/about" className="text-sm hover:text-white/70 transition-colors">
-            About
-          </Link>
           <Button variant="outline" className="border-white/20">
-            Start Tour
+            <Link to="/" className="text-sm  transition-colors">
+              Home
+            </Link>
+          </Button>
+
+          <Button variant="outline" className="border-white/20">
+            <Link to="/rooms" className="text-sm transition-colors">
+              Rooms
+            </Link>
           </Button>
         </nav>
       </div>
