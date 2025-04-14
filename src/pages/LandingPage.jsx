@@ -56,7 +56,7 @@ export default function LandingPage() {
               text="Virtual reality tours of your future living spaces"
               disabled={false}
               speed={3}
-              className=" hover:text-black"
+              className=""
             />
           </p>
           <Button
