@@ -44,11 +44,18 @@ export default function LandingPage() {
               animateBy="words"
               direction="top"
               onAnimationComplete={handleAnimationComplete}
-              className="text-6xl md:text-8xl font-playfair"
+              className="text-6xl md:text-8xl justify-center font-playfair"
             />
             <br />
             <span className="text-6xl md:text-8xl font-playfair ">
-              Before It's Builts
+              <BlurText
+                text="Before It's Builts"
+                delay={150}
+                animateBy="words"
+                direction="top"
+                onAnimationComplete={handleAnimationComplete}
+                className="text-6xl md:text-8xl justify-center font-playfair"
+              />
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 my-8 font-space">
