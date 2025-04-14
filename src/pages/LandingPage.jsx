@@ -5,7 +5,10 @@ import LiquidChrome from "../components/ui/LiquidChrome";
 import { Link } from "react-router-dom";
 import { RoomList } from "../components/RoomList";
 import ShinyText from "../components/ui/ShinyText";
-
+import BlurText from "../components/ui/BlurText";
+const handleAnimationComplete = () => {
+  console.log("");
+};
 const features = [
   {
     icon: Building2,
@@ -34,13 +37,27 @@ export default function LandingPage() {
           transition={{ duration: 0.8 }}
           className="text-center z-10"
         >
-          <h1 className="text-6xl md:text-8xl font-playfair mb-6">
-            Experience Your Home
+          <h1 className="">
+            <BlurText
+              text="Experience Your Home"
+              delay={150}
+              animateBy="words"
+              direction="top"
+              onAnimationComplete={handleAnimationComplete}
+              className="text-6xl md:text-8xl font-playfair"
+            />
             <br />
-            Before It's Built
+            <span className="text-6xl md:text-8xl font-playfair ">
+              Before It's Builts
+            </span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 font-space">
-            Virtual reality tours of your future living space
+          <p className="text-xl md:text-2xl text-gray-300 my-8 font-space">
+            <ShinyText
+              text="Virtual reality tours of your future living spaces"
+              disabled={false}
+              speed={3}
+              className=" hover:text-black"
+            />
           </p>
           <Button
             size="lg"
