@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { RoomList } from "../components/RoomList";
 import ShinyText from "../components/ui/ShinyText";
 import BlurText from "../components/ui/BlurText";
+import Plasma from "../components/ui/Plasma";
 const handleAnimationComplete = () => {
   console.log("");
 };
@@ -39,7 +40,7 @@ export default function LandingPage() {
         >
           <h1 className="">
             <BlurText
-              text="Experience Your Home"
+              text="Experience your Education"
               delay={150}
               animateBy="words"
               direction="top"
@@ -49,7 +50,7 @@ export default function LandingPage() {
             <br />
             <span className="text-6xl md:text-8xl font-playfair ">
               <BlurText
-                text="Before It's Builts"
+                text="via VR/AR"
                 delay={150}
                 animateBy="words"
                 direction="top"
@@ -60,7 +61,7 @@ export default function LandingPage() {
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 my-8 font-space">
             <ShinyText
-              text="Virtual reality tours of your future living spaces"
+              text="Virtual reality turning your learning experience"
               disabled={false}
               speed={3}
               className=""
@@ -73,7 +74,7 @@ export default function LandingPage() {
           >
             <Link to="/rooms">
               <ShinyText
-                text="Explore Rooms"
+                text="Explore AR/VR"
                 disabled={false}
                 speed={3}
                 className=" hover:text-black"
@@ -81,6 +82,16 @@ export default function LandingPage() {
             </Link>
           </Button>
         </motion.div>
+        <div className="absolute w-full h-full">
+          <Plasma
+            color="#3c1e9f"
+            speed={0.6}
+            direction="forward"
+            scale={1.1}
+            opacity={0.8}
+            mouseInteractive={false}
+          />
+        </div>
       </section>
 
       <section className="py-20 px-6 bg-neutral-900">

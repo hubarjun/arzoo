@@ -13,7 +13,7 @@ export default function Navigation() {
       <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
           <Building2 className="w-8 h-8" />
-          <span className="font-space text-xl">VirtualBuild</span>
+          <span className="font-space text-xl">Smartyeducation</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
