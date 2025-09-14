@@ -5,21 +5,10 @@ import LoadingSpinner from "@/components/LoadingSpinner";
 import BackButton from "@/components/BackButton";
 
 const roomData = {
-  bedroom: {
-    title: "Master Bedroom",
-    model: "/glb/bedroomvrmodel.glb",
-  },
-  kitchen: {
-    title: "Modern Kitchen",
-    model: "/glb/kitchenvrmodel.glb",
-  },
-  bathroom: {
-    title: "Modern Kitchen",
-    model: "/glb/bathroomvrmodel.glb",
-  },
-  LivingRoom: {
-    title: "Modern Kitchen",
-    model: "/glb/livingroomvrmodel.glb",
+  virtualLab: {
+    title: "virtual Lab",
+    model:
+      "https://cdn.glitch.me/d81e3a3b-6b97-4169-bb38-dd9df259a142/animatedlab.glb?v=1741919377670",
   },
 };
 
@@ -61,7 +50,7 @@ export default function RoomView() {
 
           <a-entity
             gltf-model={room.model}
-            animation-mixer
+            animation-mixer="clip: *; loop: repeat"
             position="0 -1 0"
             scale="2 2 2"
           ></a-entity>

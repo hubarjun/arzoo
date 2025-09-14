@@ -25,7 +25,12 @@ export default function Navigation() {
 
           <Button variant="outline" className="border-white/20">
             <Link to="/rooms" className="text-sm transition-colors">
-              Rooms
+              Virtual reality
+            </Link>
+          </Button>
+          <Button variant="outline" className="border-white/20">
+            <Link to="/models" className="text-sm transition-colors">
+              Augmented Reality
             </Link>
           </Button>
         </nav>
