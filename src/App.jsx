@@ -6,7 +6,7 @@ import Navigation from "./components/Navigation";
 import "./App.css";
 import { RoomList } from "./components/RoomList";
 import { RoomProvider } from "./context/RoomContext";
-import ModelList from "./pages/Modellist";
+import ModelList from "./pages/ModelList";
 import ARViewer from "./components/ARViewer";
 
 function App() {
