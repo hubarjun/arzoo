@@ -18,8 +18,8 @@ function App() {
           <AnimatePresence mode="wait">
             <Routes>
               <Route path="/" element={<LandingPage />} />
-              <Route path="/room/:roomId" element={<RoomView />} />
-              <Route path="/rooms" element={<RoomList />} />
+              {/* <Route path="/room/:roomId" element={<RoomView />} /> */}
+              {/* <Route path="/rooms" element={<RoomList />} /> */}
               <Route path="/models" element={<ModelList />} />
               <Route path="/ar/:modelId" element={<ARViewer />} />
             </Routes>

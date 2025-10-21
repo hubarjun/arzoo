@@ -11,9 +11,6 @@ const ModelList = () => {
         animate={{ opacity: 1, y: 0 }}
         className="mb-12"
       >
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">
-          3D Learning Models
-        </h2>
         <p className="text-gray-600">
           Explore our collection of interactive 3D models
         </p>
@@ -26,7 +23,7 @@ const ModelList = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
-            className="bg-white rounded-xl shadow-md overflow-hidden"
+            className="bg-gray-900 rounded-xl shadow-md overflow-hidden"
           >
             <img
               src={model.image}
@@ -57,27 +54,27 @@ const ModelList = () => {
 const models = [
   {
     id: 1,
-    title: "Human Anatomy",
-    description: "Explore the human body systems in 3D",
-    category: "Biology",
+    title: "Deer",
+    description: "Explore the animal gaint",
+    category: "Animals",
     image:
-      "https://images.unsplash.com/photo-1530210124550-912dc1381cb8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1542997830-49fc838e4c61?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
   },
   {
     id: 2,
-    title: "Solar System",
-    description: "Interactive model of our solar system",
-    category: "Astronomy",
+    title: "Elephant",
+    description: "Explore wild animals",
+    category: "Animals",
     image:
-      "https://plus.unsplash.com/premium_photo-1717620945061-fdb31301a205?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c29sYXIlMjBzeXN0ZW18ZW58MHx8MHx8fDA%3D",
+      "https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZWxlcGhhbnR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600",
   },
   {
     id: 3,
-    title: "Mechanical Engine",
-    description: "Detailed 3D model of a combustion engine",
-    category: "Engineering",
+    title: "Tiger",
+    description: "Explore wild animals",
+    category: "Animals",
     image:
-      "https://images.unsplash.com/photo-1600377232142-164c095e686e?q=80&w=1973&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1500463959177-e0869687df26?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dGlnZXJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600",
   },
 ];
 

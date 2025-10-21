@@ -7,19 +7,18 @@ const ARViewer = () => {
 
   const models = {
     1: {
-      src: "/glb/humananatomy.glb",
-      title: "Human Anatomy",
-      iosSrc:
-        "https://cdn.glitch.me/3bd5a0b4-ef13-48fc-9b85-6ea12e379d3b/Lymphatic%20System%203D%20Model%20HAWA%20ios.usdz?v=1743068521600",
+      src: "/glb/deer.glb",
+      title: "Deer",
+      iosSrc: "",
     },
     2: {
-      src: "https://cdn.glitch.global/3bd5a0b4-ef13-48fc-9b85-6ea12e379d3b/solar_system_animation.glb?v=1741894978046s",
-      title: "Solar System",
+      src: "/glb/elephantfinal.glb",
+      title: "Elephant",
       iosSrc: "",
     },
     3: {
-      src: "https://cdn.glitch.global/65466faf-bcbf-4e3a-a0a0-a031cc52bdd4/Engine%20HAWA.glb?v=1728290779263",
-      title: "Mechanical Engine",
+      src: "/glb/tiger_rebuilt.glb",
+      title: "Tiger",
       iosSrc: "",
     },
   };
@@ -42,7 +41,6 @@ const ARViewer = () => {
           src={model.src}
           alt={model.title}
           ios-src={model.iosSrc}
-          shadow-intensity="1"
           autoplay
           ar
           ar-modes="scene-viewer webxr quick-look"

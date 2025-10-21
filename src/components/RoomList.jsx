@@ -6,7 +6,7 @@ export const RoomList = () => {
 
   return (
     <section className="py-20 px-6">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto ">
         <h2 className="text-4xl font-playfair mb-12 text-center">
           Explore Rooms
         </h2>

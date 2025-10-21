@@ -7,8 +7,10 @@ import { RoomList } from "../components/RoomList";
 import ShinyText from "../components/ui/ShinyText";
 import BlurText from "../components/ui/BlurText";
 import Plasma from "../components/ui/Plasma";
+import ModelList from "./ModelList";
+import zooVideo from "../../public/video/AR_Animals_Magical_Mobile_Experience.mp4";
 const handleAnimationComplete = () => {
-  console.log("");
+  // console.log("");
 };
 const features = [
   {
@@ -16,11 +18,7 @@ const features = [
     title: "Visualize Your Space",
     description: "See exactly how your future home will look and feel",
   },
-  {
-    icon: Home,
-    title: "Make Informed Decisions",
-    description: "Adjust designs before construction begins",
-  },
+
   {
     icon: Building2,
     title: "Save Time & Money",
@@ -32,44 +30,41 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen">
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        {/* Background video */}
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          src={zooVideo}
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
+
+        {/* Top black linear gradient overlay to improve readability */}
+        <div className="pointer-events-none absolute inset-0 bg-black bg-opacity-60" />
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center z-10"
         >
-          <h1 className="">
-            <BlurText
-              text="Experience your Education"
-              delay={150}
-              animateBy="words"
-              direction="top"
-              onAnimationComplete={handleAnimationComplete}
-              className="text-6xl md:text-8xl justify-center font-playfair"
-            />
+          <h1 className="font-serif text-6xl md:text-8xl justify-center  bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-slate-500 via-green-400 to-gray-700 bg-clip-text text-transparentss  bg-clip-text text-transparent">
+            Experience your Zoo
             <br />
             <span className="text-6xl md:text-8xl font-playfair ">
-              <BlurText
-                text="via VR/AR"
-                delay={150}
-                animateBy="words"
-                direction="top"
-                onAnimationComplete={handleAnimationComplete}
-                className="text-6xl md:text-8xl justify-center font-playfair"
-              />
+              via VR/AR
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 my-8 font-space">
             <ShinyText
-              text="Virtual reality turning your learning experience"
+              text="Virtual reality turning your experience"
               disabled={false}
               speed={3}
-              className=""
             />
           </p>
           <Button
             size="lg"
-            className="bg-grey-200 border border-white  rounded-3xl hover:text-black hover:bg-gray-200 transition-all"
+            className="font-bold border border-white/10 bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-20 backdrop-saturate-100 backdrop-contrast-100 rounded-full"
             asChild
           >
             <Link to="/rooms">
@@ -77,21 +72,11 @@ export default function LandingPage() {
                 text="Explore AR/VR"
                 disabled={false}
                 speed={3}
-                className=" hover:text-black"
+                className=""
               />
             </Link>
           </Button>
         </motion.div>
-        <div className="absolute w-full h-full">
-          <Plasma
-            color="#3c1e9f"
-            speed={0.6}
-            direction="forward"
-            scale={1.1}
-            opacity={0.8}
-            mouseInteractive={false}
-          />
-        </div>
       </section>
 
       <section className="py-20 px-6 bg-neutral-900">
@@ -99,7 +84,7 @@ export default function LandingPage() {
           <h2 className="text-4xl font-playfair mb-12 text-center">
             Why Choose Virtual Tours?
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -117,7 +102,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <RoomList />
+      <ModelList />
     </div>
   );
 }
