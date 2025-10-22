@@ -67,7 +67,7 @@ export default function LandingPage() {
             className="font-bold border border-white/10 bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-20 backdrop-saturate-100 backdrop-contrast-100 rounded-full"
             asChild
           >
-            <Link to="/rooms">
+            <Link to="/models">
               <ShinyText
                 text="Explore AR/VR"
                 disabled={false}
